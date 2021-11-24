@@ -2,8 +2,8 @@ package com.eduardo.workshopmongodb.resources.exceptions;
 
 import java.io.Serializable;
 
-public class StandardError implements Serializable {
-    static final long serialVersionUID = 42L;
+public class StandardError implements Serializable{
+    static final long serialVersionUID = 1L;
 
     private Long timeStamp;
     private Integer status;
@@ -11,7 +11,7 @@ public class StandardError implements Serializable {
     private String message;
     private String path;
 
-    public StandardError() {
+    public StandardError(){
     }
 
     public StandardError(Long timeStamp, Integer status, String error, String message, String path) {
