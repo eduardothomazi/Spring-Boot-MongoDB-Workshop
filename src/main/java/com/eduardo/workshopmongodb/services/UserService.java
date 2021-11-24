@@ -1,5 +1,6 @@
 package com.eduardo.workshopmongodb.services;
 
+import com.eduardo.workshopmongodb.dto.UserDTO;
 import com.eduardo.workshopmongodb.entities.User;
 import com.eduardo.workshopmongodb.repositories.UserRepository;
 import com.eduardo.workshopmongodb.services.exception.ObjectNotFoundException;
@@ -22,6 +23,14 @@ public class UserService {
     public User findById(String id){
         Optional<User> optionalUser = userRepository.findById(id);
         return optionalUser.orElseThrow(() -> new ObjectNotFoundException("Object not found!"));
+    }
+
+    public User insert(User user){
+        return userRepository.insert(user);
+    }
+
+    public User userFromDTO(UserDTO userDTO){
+        return new User(userDTO.getId(), userDTO.getName(), userDTO.getEmail());
     }
 
 }
