@@ -22,8 +22,13 @@ public class PostService {
          }
          return post.get();
     }
-
+/*
     public List<Post> findByTitle(String text){
         return postRepository.findByTitleContainingIgnoreCase(text);
+    }
+    Commented to use the new query made on repository with @Query;
+ */
+    public List<Post> findByTitle(String text){
+        return postRepository.findByTitle(text);
     }
 }
