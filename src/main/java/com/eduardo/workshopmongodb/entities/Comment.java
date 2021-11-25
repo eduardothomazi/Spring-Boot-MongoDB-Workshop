@@ -1,5 +1,8 @@
 package com.eduardo.workshopmongodb.entities;
 
+import com.eduardo.workshopmongodb.dto.AuthorDTO;
+import com.eduardo.workshopmongodb.dto.UserDTO;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -26,6 +29,7 @@ public class Comment implements Serializable {
         this.author = author;
         this.post = post;
     }
+
 
     public String getId() {
         return id;

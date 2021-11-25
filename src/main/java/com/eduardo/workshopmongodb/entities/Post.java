@@ -1,6 +1,7 @@
 package com.eduardo.workshopmongodb.entities;
 
 import com.eduardo.workshopmongodb.dto.AuthorDTO;
+import com.eduardo.workshopmongodb.dto.CommentDTO;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Post implements Serializable {
 
     private AuthorDTO author;
 
-    private List<Comment> comments = new ArrayList<>();
+    private List<CommentDTO> comments = new ArrayList<>();
 
     public Post() {
     }
@@ -71,7 +72,7 @@ public class Post implements Serializable {
         this.author = author;
     }
 
-    public List<Comment> getComments() {
+    public List<CommentDTO> getComments() {
         return comments;
     }
 
